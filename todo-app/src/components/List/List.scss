@@ -1,5 +1,23 @@
 .list {
     margin-bottom: 20px;
+
+    &__add-button {
+      opacity: 0.4;
+
+      svg {
+        path {
+          stroke: grey;
+        }
+      }
+      span {
+        color: rgb(32, 32, 32);
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
     li {
       display: flex;
       align-items: center;
