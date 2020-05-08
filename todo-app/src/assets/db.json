@@ -1,0 +1,12 @@
+{
+    "colors": [
+        { "id": 1, "hex": "#c9d1d3", "name": "grey" },  
+        { "id": 2, "hex": "#42b883", "name": "green" },
+        { "id": 3, "hex": "#64c4ed", "name": "blue" },
+        { "id": 4, "hex": "#ffbbcc", "name": "pink" },
+        { "id": 5, "hex": "#b6e6bd", "name": "lime" },
+        { "id": 6, "hex": "#c355f5", "name": "purple" },
+        { "id": 7, "hex": "#110133", "name": "black" },
+        { "id": 8, "hex": "#ff6464", "name": "red" }    
+    ]
+}

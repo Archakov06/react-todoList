@@ -32,6 +32,11 @@
         border-radius: 4px;
       }
 
+      .badge {
+        position: relative;
+        left: 4px;
+      }
+
       i {
         display: inline-flex;
         margin-right: 8px;
@@ -41,25 +46,6 @@
         }
       }
 
-      .badge {
-        width: 10px;
-        height: 10px;
-        border-radius: 30px;
-        position: relative;
-        left: 4px;
-
-        &--green {
-          background-color: green;
-        }
-        &--orange {
-          background-color: orange;
-        }
-        &--blue {
-          background-color: blue;
-        }
-        &--yellow {
-          background-color: yellow;
-        }
-      }
+      
     }
   }

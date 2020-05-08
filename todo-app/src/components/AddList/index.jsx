@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import List from '../List';
 
+import Badge from '../Badge'
+
 import "./AddList.scss";
 
-const AddList = () => {
+const AddList = ({ colors }) => {
     const [state, setState] = useState(false);
     return (
         <div className="add-list">
@@ -20,6 +22,11 @@ const AddList = () => {
             />
             {state && <div className="add-list__popup">
                 <input type="text" placeholder="Название списка" className="field"/>
+                <div className="add-list__popup-colors">
+                    {
+                        colors.map(color => <Badge key={color.id} color={color.name}/>)
+                    }
+                </div>
                 <button className="button">Добавить</button>
             </div>}
         </div>

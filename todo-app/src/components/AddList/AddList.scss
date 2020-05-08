@@ -13,5 +13,24 @@
             width: 100%;
             margin-top: 10px;
         }
+
+        &-colors {
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+
+            .badge {
+                width: 16px;
+                height: 16px;
+                position: static;
+                cursor: pointer;
+                border: 2px soid transparent;
+
+
+                &.active {
+                    border: 2px soid #525252;
+                }
+            }
+        }
     }
 }
