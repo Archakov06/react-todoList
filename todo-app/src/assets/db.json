@@ -8,5 +8,18 @@
         { "id": 6, "hex": "#c355f5", "name": "purple" },
         { "id": 7, "hex": "#110133", "name": "black" },
         { "id": 8, "hex": "#ff6464", "name": "red" }    
+    ],
+    "lists": [
+        { "id": 1, "name": "Покупки", "colorId": 5 },
+        { "id": 2, "name": "Фронтенд", "colorId": 4 },
+        { "id": 2, "name": "Фильмы и сериалы", "colorId": 3 },
+        { "id": 3, "name": "Книги", "colorId": 2 },
+        { "id": 4, "name": "Личное", "colorId": 1 }
+    ],
+    "tasks": [
+        { "id": 1, "listId": 2, "text": "bob1" },
+        { "id": 2, "listId": 2, "text": "bob2" },
+        { "id": 3, "listId": 2, "text": "bob3" },
+        { "id": 4, "listId": 2, "text": "bob4" }
     ]
 }
