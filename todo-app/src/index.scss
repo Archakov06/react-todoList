@@ -19,16 +19,18 @@ body {
   left: 50%;
   top: 50%;
   width: 750px;
-  height: 530px;
+  min-height: 530px;
   transform: translate(-50%, -50%);
   box-shadow: 0px 0px 15px #b9b9b9;
   border-radius: 5px;
   font-size: 14px;
+  box-sizing: border-box;
   
 
   &__sidebar {
     background-color: #707070;
     width: 240px;
+    min-height: 530px;
     height: 100%;
     padding: 60px 20px;
     box-sizing: border-box;
