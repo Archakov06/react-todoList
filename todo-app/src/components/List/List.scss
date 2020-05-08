@@ -1,14 +1,10 @@
 .list {
+    $self: &;
     margin-bottom: 20px;
 
     &__add-button {
       opacity: 0.4;
-
-      svg {
-        path {
-          stroke: grey;
-        }
-      }
+      
       span {
         color: rgb(32, 32, 32);
       }
@@ -16,6 +12,10 @@
       &:hover {
         opacity: 1;
       }
+    }
+
+    &__remove-icon {
+      opacity: 0;
     }
 
     li {
@@ -26,8 +26,16 @@
       cursor: pointer;
       color: #FFF;
 
+      
+      span {
+        flex: 1;
+      }
+
       &:hover {
         background-color: lighten($color: #707070, $amount: 3);
+        #{$self}__remove-icon {
+          opacity: 0.4;
+        }
       }
 
       &.active {

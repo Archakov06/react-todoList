@@ -13,6 +13,7 @@ body {
 }
 
 .todo {
+  display: flex;
   background-color: #606060;
   position: absolute;
   left: 50%;
@@ -33,7 +34,14 @@ body {
     box-sizing: border-box;
     border-radius: 5px 0 0 5px;
   }
+
+  &__tasks {
+    flex: 1;
+    padding: 60px;
+  }
 }
+
+
 
 .button {
   background-color: rgb(245, 245, 0);

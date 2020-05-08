@@ -12,6 +12,12 @@ const AddList = ({ colors, onAdd }) => {
     const [selectedColor, setSelectedColor] = useState(colors[0].id);
     const [inputValue, setInputValue] = useState('');
 
+    const onClose = () => {
+        setState(false);
+        setInputValue('');
+        setSelectedColor(colors[0].id)
+    }
+
     const addList = () => {
         if (!inputValue) {
             alert('Empty name')
@@ -19,6 +25,7 @@ const AddList = ({ colors, onAdd }) => {
         }
         const color = colors.filter(c => c.id === selectedColor)[0].name
         onAdd({ id: Math.random(), name: inputValue, color});
+        onClose()
     }
 
     return (
@@ -32,14 +39,13 @@ const AddList = ({ colors, onAdd }) => {
                         name: "Добавить список"
                     },
                 ]}
-                isRemovable
             />
             {state && <div className="add-list__popup">
                 <img 
                     src={closeSvg} 
                     alt="close btn" 
                     className="add-list__popup-close-btn"
-                    onClick={() => setState(false)}
+                    onClick={onClose}
                 />
 
                 <input 

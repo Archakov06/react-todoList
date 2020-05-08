@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+
 import List from './components/List'
 import AddList from './components/AddList'
+import Tasks from './components/Tasks';
 
 import db from './assets/db.json'
 
@@ -33,6 +35,7 @@ const onAddList = (obj) => {
         />
         <List 
           items={lists}
+          onRemove={list => console.log(list)}
           isRemovable
         />
         <AddList 
@@ -40,7 +43,9 @@ const onAddList = (obj) => {
           onAdd={onAddList}  
         />
       </div>
-      <div className="todo__tasks"></div>
+      <div className="todo__tasks">
+        <Tasks />
+      </div>
     </div>  
   );
 }
