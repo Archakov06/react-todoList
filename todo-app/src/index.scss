@@ -55,6 +55,22 @@ body {
   &:hover {
     background-color: darken($color: rgb(245, 245, 0), $amount: 6%);
   }
+
+  &:active {
+    background-color: darken($color: rgb(245, 245, 0), $amount: 3%);
+  }
+
+  &--grey {
+    background-color: grey;
+
+    &:hover{
+      background-color: darken($color: grey, $amount: 6%);
+    }
+
+    &:active {
+      background-color: darken($color: grey, $amount: 3%);
+    }
+  }
 }
 
 .field {

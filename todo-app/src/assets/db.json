@@ -49,7 +49,7 @@
     },
     {
       "id": 2,
-      "name": "Фильмы и сериалы",
+      "name": "bob4bruh",
       "colorId": 3
     },
     {
@@ -92,6 +92,24 @@
       "listId": 2,
       "text": "bob4",
       "complete": false
+    },
+    {
+      "listId": 3,
+      "text": "hui",
+      "completed": false,
+      "id": 5
+    },
+    {
+      "listId": 3,
+      "text": "hui2",
+      "completed": false,
+      "id": 6
+    },
+    {
+      "listId": 3,
+      "text": "hui3",
+      "completed": false,
+      "id": 7
     }
   ]
 }
