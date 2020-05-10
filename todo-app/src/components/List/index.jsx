@@ -25,7 +25,10 @@ const List = ({ items, isRemovable, onClickItem, onClick, onRemove, activeItem }
                     <li 
                         key={index} 
                         className={classNames(item.className, {
-                            active: activeItem && activeItem.id === item.id})}
+                            active: item.active
+                            ? item.active
+                            : activeItem && activeItem.id === item.id
+                        })}
                         onClick={onClickItem ? () => onClickItem(item) : null}
                     >
                         <i>{item.icon ? item.icon : <Badge color={item.color.name}/> }</i>

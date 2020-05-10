@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useHistory } from 'react-router-dom';
 
 import { List, Badge } from '../'
 
@@ -12,6 +13,8 @@ const AddList = ({ colors, onAdd }) => {
     const [selectedColor, setSelectedColor] = useState(null);
     const [inputValue, setInputValue] = useState('');
     const [isLoading, setIsLoading] = useState(false);
+
+    let history = useHistory();
     
 
     useEffect(() => {
@@ -36,9 +39,10 @@ const AddList = ({ colors, onAdd }) => {
                 name: inputValue, 
                 colorId: selectedColor
         }).then(({ data }) => {
-            const color = colors.filter(c => c.id === selectedColor)[0].name
-            const listObj = {...data, color: {name: color}, tasks: []}
+            const Color = colors.filter(c => c.id === selectedColor)[0].name
+            const listObj = {...data, color: colors.find(color => color.name === Color), tasks: []}
             onAdd(listObj);
+            history.push('/lists/' + listObj.id);
             onClose();
         }).finally(() => {
             setIsLoading(false);
@@ -66,6 +70,7 @@ const AddList = ({ colors, onAdd }) => {
                 />
 
                 <input 
+                    autoFocus={state}
                     value={inputValue}
                     onChange={e => setInputValue(e.target.value)}
                     type="text" 
@@ -83,7 +88,7 @@ const AddList = ({ colors, onAdd }) => {
                         />
                     ))}
                 </div>
-                <button onClick={addList} className="button">{!isLoading ? 'Добавить' : 'Добавляется...'}</button>
+                <button disabled={isLoading} onClick={addList} className="button">{!isLoading ? 'Добавить' : 'Добавляется...'}</button>
             </div>}
         </div>
     );

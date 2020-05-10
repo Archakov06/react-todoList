@@ -43,73 +43,40 @@
   ],
   "lists": [
     {
-      "id": 1,
-      "name": "Покупки",
-      "colorId": 5
+      "name": "Hello, react.js",
+      "colorId": 1,
+      "id": 1
     },
     {
-      "id": 2,
-      "name": "bob4bruh",
-      "colorId": 3
-    },
-    {
-      "id": 3,
       "name": "Книги",
-      "colorId": 2
-    },
-    {
-      "id": 4,
-      "name": "Личное",
-      "colorId": 1
-    },
-    {
-      "name": "Фронтенд",
       "colorId": 8,
-      "id": 5
+      "id": 2
     }
   ],
   "tasks": [
     {
-      "id": 1,
-      "listId": 2,
-      "text": "bob1",
-      "complete": false
+      "listId": 1,
+      "text": "learn how to useState, useEffect, useHistory",
+      "completed": true,
+      "id": 1
     },
     {
-      "id": 2,
-      "listId": 2,
-      "text": "bob2",
-      "complete": false
+      "listId": 1,
+      "text": "create todo app on react.js",
+      "completed": true,
+      "id": 2
     },
     {
-      "id": 3,
-      "listId": 2,
-      "text": "bob3",
-      "complete": true
-    },
-    {
-      "id": 4,
-      "listId": 2,
-      "text": "bob4",
-      "complete": false
-    },
-    {
-      "listId": 3,
-      "text": "hui",
+      "listId": 1,
+      "text": "get my dream job",
       "completed": false,
-      "id": 5
+      "id": 3
     },
     {
-      "listId": 3,
-      "text": "hui2",
+      "listId": 2,
+      "text": "прочитать Чистый код",
       "completed": false,
-      "id": 6
-    },
-    {
-      "listId": 3,
-      "text": "hui3",
-      "completed": false,
-      "id": 7
+      "id": 4
     }
   ]
 }

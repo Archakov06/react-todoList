@@ -5,6 +5,7 @@ const AddTaskForm = ({ list, onAddTask }) => {
 
     const [formVisible, setFormVisible] = useState(false);
     const [inputValue, setInputValue] = useState('');
+    const [isLoading, setIsLoading] = useState('');
 
 
     const toggleFormVisible = () => {
@@ -13,6 +14,11 @@ const AddTaskForm = ({ list, onAddTask }) => {
     }
 
     const addTask = () => {
+        if (!inputValue) {
+            alert('Empty name')
+            return;
+        }
+        setIsLoading(true)
         const obj = {
             listId: list.id,
             text: inputValue,
@@ -23,7 +29,7 @@ const AddTaskForm = ({ list, onAddTask }) => {
             obj.id = data.id
             onAddTask(list.id, obj);
             toggleFormVisible()
-        });
+        }).finally(() => setIsLoading(false));
     }
 
     return (
@@ -42,7 +48,7 @@ const AddTaskForm = ({ list, onAddTask }) => {
                     className="field"
                     onChange={e => setInputValue(e.target.value)}
                 />
-                <button onClick={addTask} className="button" >Добавить задачу</button>
+                <button disabled={isLoading} onClick={addTask} className="button" >{!isLoading ? 'Добавить задачу' : 'Добавление...'}</button>
                 <button onClick={toggleFormVisible} className="button button--grey">Отмена</button>
             </div>
             }
